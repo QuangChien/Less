@@ -91,6 +91,12 @@ ul{
    -o-transition: @property1 (@duration1) @timing, @property2 (@duration2) @timing;
 }
 
+.sub-menu-toggle(){
+   opacity: 1;
+   transform: translateY(0%);
+   transition-delay: 0s, 0s, 0.5s;
+}
+
 a{
    text-decoration: none;
    color: @color-base-type;
@@ -168,6 +174,10 @@ a.go{
    border-width: 4px 4px 0;
 }
 
+.bg-none{
+   background: none;
+}
+
 #header-nav{
    margin-top: 140px;
    .container{
@@ -189,21 +199,40 @@ a.go{
                &.pos-1{
                   .level-top{
                      &:hover + .nav-1{
-                        opacity: 1;
-                        transform: translateY(0%);
-                        transition-delay: 0s, 0s, 0.5s;
+                        .sub-menu-toggle()
                      }
                   }
                }
                &.pos-2{
                    .level-top{
                       &:hover + .nav-2{
-                         opacity: 1;
-                         transform: translateY(0%);
-                         transition-delay: 0s, 0s, 0.5s;
+                         .sub-menu-toggle()
                       }
                    }
                 }
+               &.pos-3{
+                  .level-top{
+                     &:hover + .nav-3{
+                        .sub-menu-toggle()
+                     }
+                  }
+               }
+
+               &.pos-4{
+                  .level-top{
+                     &:hover + .nav-4{
+                        .sub-menu-toggle()
+                     }
+                  }
+               }
+
+               &.pos-5{
+                  .level-top{
+                     &:hover + .nav-5{
+                        .sub-menu-toggle()
+                     }
+                  }
+               }
                text-align: left;
                list-style: none;
                float: left;
@@ -333,13 +362,15 @@ a.go{
                      width: 595px;
                      transition: all 0.5s ease;
                      opacity: 0;
+                     z-index: 5;
                   }
 
                   &.nav-2{
                      width: 1176px;
                      min-height: 400px;
                      transition: all 0.5s ease;
-                     opacity: 1;
+                     opacity: 0;
+                     z-index: 4;
                      .nav-block--center{
                         .dd-itemgrid-4col{
                            .nav-2-2{
@@ -355,6 +386,24 @@ a.go{
                                     left: 32%;
                                     z-index: 10;
                                     opacity: 0;
+                                    li{
+                                       background: none;
+                                       padding-left: 0;
+                                       .caret-3{
+                                          float: right;
+                                          margin-top: 4px;
+                                          border-color: transparent transparent transparent @color-base-type;
+                                          border-style: solid none solid solid;
+                                          border-width: 4px 0 4px 4px;
+                                          margin-left: 5px;
+                                          opacity: 0.2;
+                                       }
+                                       &:hover{
+                                          .caret-3{
+                                             border-color: transparent transparent transparent @color-link;
+                                          }
+                                       }
+                                    }
                                  }
                                  a{
                                     &:hover + ul{
@@ -476,6 +525,8 @@ a.go{
                   &.nav-3{
                      width: 870px;
                      left: 0;
+                     opacity: 0;
+                     z-index: 3;
                      .nav-block--top{
                         font-size: 14px;
                         .links-wrapper-separators{
@@ -535,6 +586,8 @@ a.go{
                      padding: 20px;
                      width: 16em;
                      min-width: 12em;
+                     opacity: 1;
+                     z-index: 2;
                      .classic{
                         a{
                            text-decoration: none;
@@ -590,6 +643,8 @@ a.go{
                      right: 0;
                      width: 1176px;
                      height: 400px;
+                     opacity: 0;
+                     z-index: 1;
                      .responsive a{
                         color: red;
                         text-decoration: none;

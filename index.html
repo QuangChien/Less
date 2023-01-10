@@ -7,15 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mega Menu</title>
     <link rel="stylesheet" href="./dist/css/styles.css">
-<!--    <link href="//db.onlinewebfonts.com/c/3145477a9cc0d8e26e183e848f7c2733?family=theme-icons" rel="stylesheet" type="text/css"/>-->
 </head>
 <body>
 <div id="header-nav">
     <div class="nav container">
         <div class="inner-container">
+            <div class="mobnav-trigger-wrapper">
+                <a class="mobnav-trigger flex align-center" href="#">
+                    <span class="trigger-icon">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </span>
+                    <span class="menu-mobile">Menu</span>
+                </a>
+            </div>
             <ul id="nav" class="nav-list">
-                <li class="nav-item">
+                <li class="nav-item hide-960">
                     <a href="" class="level-top active">
+                        <span class="nav-item-content">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item home-960 none">
+                    <a href="" class="level-top">
                         <span class="nav-item-content">Home</span>
                     </a>
                 </li>
@@ -23,8 +37,13 @@
                     <a href="" class="level-top">
                         <span class="nav-item-content">Women</span>
                         <span class="caret caret-1">&nbsp</span>
+                        <span class="opener">
+                            <svg width="20px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                            </svg>
+                        </span>
                     </a>
-                    <div class="nav-panel--dropdown nav-panel nav-1">
+                    <div class="nav-panel--dropdown nav-panel nav-1 none">
                         <div class="nav-panel-inner flex">
                             <div class="nav-block--center grid12-4">
                                 <ul class="level0 nav-submenu">
@@ -36,19 +55,24 @@
                                     <li class="nav-item level1 parent nav-1-2">
                                         <a href="">
                                             <span>Shirts & Tops</span>
+                                            <span class="opener">
+                                                <svg width="20px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                                                </svg>
+                                            </span>
                                         </a>
-                                        <ul class="level1 nav-submenu1 nav-panel">
-                                            <li class="nav-item level2 nav-1-2-1 first classic">
+                                        <ul class="level1 nav-submenu1 nav-panel none">
+                                            <li class="nav-item level2 nav-1-2-1 first">
                                                 <a href="">
                                                     <span>Size - Small</span>
                                                 </a>
                                             </li>
-                                            <li class="nav-item level2 nav-1-2-2 classic">
+                                            <li class="nav-item level2 nav-1-2-2">
                                                 <a href="">
                                                     <span>Size - Medium</span>
                                                 </a>
                                             </li>
-                                            <li class="nav-item level2 nav-1-2-3 last classic">
+                                            <li class="nav-item level2 nav-1-2-3 last">
                                                 <a href="">
                                                     <span>Size - Large</span>
                                                 </a>
@@ -82,11 +106,11 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="nav-block nav-block--right std grid12-8">
+                            <div class="nav-block nav-block--right std grid12-8 hide-960">
                                 <a href="">
                                     <img class="fade-on-hover"
-                                         src="http://www.therockweb.com.br/media/wysiwyg/demo/infortis/ultimo/menu/01.jpg"
-                                         alt="">
+                                         src="./dist/images/01.jpg"
+                                         width="100%">
                                 </a>
                             </div>
                         </div>
@@ -100,15 +124,15 @@
                             </span>
                         <span class="caret caret-1">&nbsp</span>
                     </a>
-                    <div class="nav-panel--dropdown nav-panel nav-2">
+                    <div class="nav-panel--dropdown nav-panel nav-2 none">
                         <div class="nav-panel-inner">
                             <div class="flex content-between">
                                 <div class="nav-block--center grid12-8">
-                                    <ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-4col flex flex-wrap content-between">
-                                        <li class="nav-item level1 nav-2-2 nav-item--only-subcategories parent pb-4">
+                                    <ul class="level0 nav-submenu dd-itemgrid-4col flex flex-wrap content-between">
+                                        <li class="nav-item level1 nav-2-2 pb-4">
                                             <a href="">
                                                 <span>Tops
-                                                    <span class="cat-label cat-label-label2">Hot!</span>
+                                                    <span class="cat-label cat-label-label2 label-hot">Hot!</span>
                                                 </span>
                                             </a>
                                             <ul class="level1 nav-submenu1 nav-panel second-font">
@@ -117,7 +141,7 @@
                                                         <span>Casual Tops</span>
                                                         <span class="caret caret-2">&nbsp;</span>
                                                     </a>
-                                                    <ul class="level2 nav-submenu nav-panel--dropdown nav-panel">
+                                                    <ul class="level2 nav-submenu nav-panel--dropdown nav-panel none">
                                                         <li class="nav-item level3 nav-2-1-1-1">
                                                             <a href="">
                                                                 <span>Modest</span>
@@ -133,13 +157,13 @@
                                                                 <span>Collections</span>
                                                                 <span class="caret caret-3">&nbsp;</span>
                                                             </a>
-                                                            <ul class="level3 nav-submenu nav-panel--dropdown nav-panel">
-                                                                <li class="nav-item level4 nav-2-1-1-3-1 classic">
+                                                            <ul class="level3 nav-submenu nav-panel--dropdown nav-panel none">
+                                                                <li class="nav-item level4 nav-2-1-1-3-1 ">
                                                                     <a href="">
                                                                         <span>Designer Style</span>
                                                                     </a>
                                                                 </li>
-                                                                <li class="nav-item level4 nav-2-1-1-3-2 classic">
+                                                                <li class="nav-item level4 nav-2-1-1-3-2 ">
                                                                     <a href=""><span>Paris Style</span>
                                                                     </a>
                                                                 </li>
@@ -164,14 +188,14 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item level1 nav-2-2 nav-item--only-subcategories parent pb-4">
+                                        <li class="nav-item level1 nav-2-2 pb-4">
                                             <a href="">
                                             <span>Bags
-                                                <span class="cat-label cat-label-label2">Hot!</span>
+                                                <span class="cat-label cat-label-label2 label-hot">Hot!</span>
                                             </span>
                                             </a>
                                             <ul class="level1 nav-submenu1 nav-panel second-font">
-                                                <li class="nav-item level2 nav-2-2-5 first classic">
+                                                <li class="nav-item level2 nav-2-2-5">
                                                     <a href="">
                                                         <span>Designer Bags</span>
                                                     </a>
@@ -193,11 +217,11 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item level1 nav-2-2 nav-item--only-subcategories parent pb-4">
+                                        <li class="nav-item level1 nav-2-2  pb-4">
                                             <a href="">
-                                            <span>Shoes
-                                                <!--                                                <span class="cat-label cat-label-label2">New!</span>-->
-                                            </span>
+                                                <span>Shoes
+                                                    <span class="cat-label cat-label-label2">New</span>
+                                                </span>
                                             </a>
                                             <ul class="level1 nav-submenu1 nav-panel second-font">
                                                 <li class="nav-item level2 nav-2-2-5">
@@ -222,11 +246,9 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item level1 nav-2-2 nav-item--only-subcategories parent pb-4">
+                                        <li class="nav-item level1 nav-2-2  pb-4">
                                             <a href="">
-                                            <span>Jewelry
-                                                <span class="cat-label cat-label-label2">Hot!</span>
-                                            </span>
+                                                <span>Jewelry</span>
                                             </a>
                                             <ul class="level1 nav-submenu1 nav-panel second-font">
                                                 <li class="nav-item level2 nav-2-2-5">
@@ -246,14 +268,13 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item level1 nav-2-2 nav-item--only-subcategories parent pb-4">
+                                        <li class="nav-item level1 nav-2-2  pb-4">
                                             <a href="">
                                             <span>Dresses
-                                                <span class="cat-label cat-label-label2">Hot!</span>
                                             </span>
                                             </a>
                                             <ul class="level1 nav-submenu1 nav-panel second-font">
-                                                <li class="nav-item level2 nav-2-2-5 first classic">
+                                                <li class="nav-item level2 nav-2-2-5">
                                                     <a href="">
                                                         <span>Casual Dresses</span>
                                                     </a>
@@ -275,13 +296,13 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item level1 nav-2-2 nav-item--only-subcategories parent pb-4">
+                                        <li class="nav-item level1 nav-2-2  pb-4">
                                             <a href="">
                                             <span>Lingerie
                                             </span>
                                             </a>
                                             <ul class="level1 nav-submenu1 nav-panel second-font">
-                                                <li class="nav-item level2 nav-2-2-5 first classic">
+                                                <li class="nav-item level2 nav-2-2-5">
                                                     <a href="">
                                                         <span>Bras</span>
                                                     </a>
@@ -303,10 +324,9 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item level1 nav-2-2 nav-item--only-subcategories parent pb-4">
+                                        <li class="nav-item level1 nav-2-2  pb-4">
                                             <a href="">
                                             <span>Jackets
-                                                <span class="cat-label cat-label-label2">Hot!</span>
                                             </span>
                                             </a>
                                             <ul class="level1 nav-submenu1 nav-panel second-font">
@@ -332,10 +352,9 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="nav-item level1 nav-2-2 nav-item--only-subcategories parent pb-4">
+                                        <li class="nav-item level1 nav-2-2  pb-4">
                                             <a href="">
                                             <span>Swimwear
-                                                <span class="cat-label cat-label-label2">Hot!</span>
                                             </span>
                                             </a>
                                             <ul class="level1 nav-submenu1 nav-panel second-font">
@@ -375,7 +394,7 @@
                                         <div class="product-item">
                                             <div class="product-img">
                                                 <img src="./dist/images/placeholder_1.jpg" width="100%">
-                                                <div class="product-action flex none">
+                                                <div class="product-action flex">
                                                     <span class="action-item add-to-wishlist">
                                                         <svg height="16px" id="wishlist-svg" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="18px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M429.9,95.6c-40.4-42.1-106-42.1-146.4,0L256,124.1l-27.5-28.6c-40.5-42.1-106-42.1-146.4,0c-45.5,47.3-45.5,124.1,0,171.4   L256,448l173.9-181C475.4,219.7,475.4,142.9,429.9,95.6z"/></g></svg><path d="M462.1 62.86C438.8 41.92 408.9 31.1 378.7 32c-37.49 0-75.33 15.4-103 43.98l-19.7 20.27l-19.7-20.27C208.6 47.4 170.8 32 133.3 32C103.1 32 73.23 41.93 49.04 62.86c-62.14 53.79-65.25 149.7-9.23 207.6l193.2 199.7C239.4 476.7 247.6 480 255.9 480c8.332 0 16.69-3.267 23.01-9.804l193.1-199.7C528.2 212.5 525.1 116.6 462.1 62.86zM437.6 237.1l-181.6 187.8L74.34 237.1C42.1 203.8 34.46 138.1 80.46 99.15c39.9-34.54 94.59-17.5 121.4 10.17l54.17 55.92l54.16-55.92c26.42-27.27 81.26-44.89 121.4-10.17C477.1 138.6 470.5 203.1 437.6 237.1z"/></svg>                                                    </span>
                                                     <span class="action-item add-to-compare">
@@ -391,7 +410,7 @@
                                         <div class="product-item">
                                             <div class="product-img">
                                                 <img src="./dist/images/placeholder_1.jpg" width="100%">
-                                                <div class="product-action flex none">
+                                                <div class="product-action flex">
                                                     <span class="action-item add-to-wishlist">
                                                         <svg height="16px" id="wishlist-svg" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="18px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M429.9,95.6c-40.4-42.1-106-42.1-146.4,0L256,124.1l-27.5-28.6c-40.5-42.1-106-42.1-146.4,0c-45.5,47.3-45.5,124.1,0,171.4   L256,448l173.9-181C475.4,219.7,475.4,142.9,429.9,95.6z"/></g></svg><path d="M462.1 62.86C438.8 41.92 408.9 31.1 378.7 32c-37.49 0-75.33 15.4-103 43.98l-19.7 20.27l-19.7-20.27C208.6 47.4 170.8 32 133.3 32C103.1 32 73.23 41.93 49.04 62.86c-62.14 53.79-65.25 149.7-9.23 207.6l193.2 199.7C239.4 476.7 247.6 480 255.9 480c8.332 0 16.69-3.267 23.01-9.804l193.1-199.7C528.2 212.5 525.1 116.6 462.1 62.86zM437.6 237.1l-181.6 187.8L74.34 237.1C42.1 203.8 34.46 138.1 80.46 99.15c39.9-34.54 94.59-17.5 121.4 10.17l54.17 55.92l54.16-55.92c26.42-27.27 81.26-44.89 121.4-10.17C477.1 138.6 470.5 203.1 437.6 237.1z"/></svg>                                                    </span>
                                                     <span class="action-item add-to-compare">
@@ -409,15 +428,15 @@
                             </div>
                             <div class="nav-block--bottom second-font">
                                 <ul class="links">
-                                    <li class="label">Featured Categories:</li>
+                                    <li class="label flex align-center mr-1">Featured Categories:</li>
                                     <li class="first">
-                                        <a href="">Casual Tops</a>
+                                        <a class="recommen-item" href="">Casual Tops</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dresses</a>
+                                        <a class="recommen-item" href="#">Dresses</a>
                                     </li>
                                     <li class="last">
-                                        <a href="#">Shirts &amp; Blouses</a>
+                                        <a class="recommen-item" href="#">Shirts &amp; Blouses</a>
                                     </li>
                                 </ul>
                             </div>
@@ -429,42 +448,42 @@
                         <span class="nav-item-content">Electronics</span>
                         <span class="caret caret-1">&nbsp</span>
                     </a>
-                    <div class="nav-panel--dropdown nav-panel nav-3">
+                    <div class="nav-panel--dropdown nav-panel nav-3 none">
                         <div class="nav-panel-inner">
                             <div class="nav-block--top grid-full">
                                 <div class="links-wrapper-separators">
                                     <ul class="links">
                                         <li class="label">Recommended:</li>
                                         <li class="first">
-                                            <a href="">Configurable</a>
+                                            <a class="recommen-item" href="">Configurable</a>
                                         </li>
                                         <li>
-                                            <a href="#">Galaxy S3</a>
+                                            <a class="recommen-item" href="#">Galaxy S3</a>
                                         </li>
                                         <li>
-                                            <a href="#">Galaxy S4</a>
+                                            <a class="recommen-item" href="#">Galaxy S4</a>
                                         </li>
                                         <li class="last">
-                                            <a href="#">iPhone 5</a>
+                                            <a class="recommen-item" href="#">iPhone 5</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="links-wrapper-separators f-right">
                                     <ul class="links">
                                         <li class="first">
-                                            <a href="#">Add</a>
+                                            <a class="recommen-item" href="#">Add</a>
                                         </li>
                                         <li>
-                                            <a href="#">Custom</a>
+                                            <a class="recommen-item" href="#">Custom</a>
                                         </li>
                                         <li class="last">
-                                            <a href="#">Links</a>
+                                            <a class="recommen-item" href="#">Links</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <span class="section-line"></span>
                             </div>
-                            <div class="nav-block--bottom flex">
+                            <div class="nav-block--bottom flex mt-5">
                                 <div class="nav-block nav-block--left std grid12-4">
                                     <div class="hide-below-768">
                                         <a href="">
@@ -478,8 +497,8 @@
                                     </div>
                                 </div>
                                 <div class="nav-block--center grid12-8">
-                                    <ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid-3col flex">
-                                        <li class="nav-item level1 nav-3-3 last nav-item--only-subcategories parent">
+                                    <ul class="level0 nav-submenu dd-itemgrid-3col flex">
+                                        <li class="nav-item level1 nav-3-3 last">
                                             <div class="nav-block nav-block--top std">
                                                 <a href="">
                                                     <img src="./dist/images/04.png" width="100%">
@@ -489,91 +508,91 @@
                                                 <span>Phones & Tablets</span>
                                             </a>
                                             <ul class="level1 nav-submenu1 nav-panel second-font">
-                                                <li class="nav-item level2 nav-3-3-1 first classic">
+                                                <li class="nav-item level2 nav-3-3-1 first ">
                                                     <a href="" class="">
                                                         <span class="nav-item-content">Sample
-                                                            <span class="cat-label cat-label-label1">New</span>
+                                                            <span class="cat-label cat-label-label2">New</span>
                                                         </span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-2">
                                                     <a href="">
                                                         <span>Samsung</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-3 nav-item-parent">
                                                     <a href="">
                                                         <span>Apple</span>
                                                     </a>
-                                                    <ul class="level1 nav-submenu nav-4-2 nav-panel">
-                                                        <li class="nav-item level2 nav-4-2-5 classic">
+                                                    <ul class="level1 nav-submenu nav-3-3-3 nav-panel">
+                                                        <li class="nav-item level2 nav-3-3-1">
                                                             <a href="">
                                                                 <span>iPhone 3GS</span>
                                                             </a>
                                                         </li>
-                                                        <li class="nav-item level2 nav-4-2-5 classic">
+                                                        <li class="nav-item level2 nav-3-3-2">
                                                             <a href="">
                                                                 <span>iPhone 4</span>
                                                             </a>
                                                         </li>
-                                                        <li class="nav-item level2 nav-4-2-5 classic">
+                                                        <li class="nav-item level2 nav-3-3-3">
                                                             <a href="">
                                                                 <span>iPhone 4s</span>
                                                             </a>
                                                         </li>
-                                                        <li class="nav-item level2 nav-4-2-5 classic">
+                                                        <li class="nav-item level2 nav-3-3-4">
                                                             <a href="">
                                                                 <span>iPhone 5</span>
                                                             </a>
                                                         </li>
-                                                        <li class="nav-item level2 nav-4-2-5 classic">
+                                                        <li class="nav-item level2 nav-3-3-5">
                                                             <a href="">
                                                                 <span>iPad Retina</span>
                                                             </a>
                                                         </li>
-                                                        <li class="nav-item level2 nav-4-2-5 classic">
+                                                        <li class="nav-item level2 nav-3-3-6">
                                                             <a href="">
                                                                 <span>iPad Mini</span>
                                                             </a>
                                                         </li>
-                                                        <li class="nav-item level2 nav-4-2-5 classic">
+                                                        <li class="nav-item level2 nav-3-3-7">
                                                             <a href="">
                                                                 <span>iPad Air</span>
                                                             </a>
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-5">
                                                     <a href="">
                                                         <span>BlackBerry</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-6">
                                                     <a href="">
                                                         <span>Motorola</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-7">
                                                     <a href="">
                                                         <span>Nokia</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-8">
                                                     <a href="">
                                                         <span>HTC</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-9">
                                                     <a href="">
                                                         <span>Huawei</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-10">
                                                     <a href="">
                                                         <span>Google</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-11">
                                                     <a href="">
                                                         <span>Sony</span>
                                                     </a>
@@ -581,7 +600,7 @@
                                             </ul>
                                         </li>
 
-                                        <li class="nav-item level1 nav-3-3 last nav-item--only-subcategories parent">
+                                        <li class="nav-item level1 nav-3-3 last ">
                                             <div class="nav-block nav-block--top std">
                                                 <a href="">
                                                     <img src="./dist/images/04.png" width="100%">
@@ -591,63 +610,63 @@
                                                 <span>Accessories</span>
                                             </a>
                                             <ul class="level1 nav-submenu1 nav-panel second-font">
-                                                <li class="nav-item level2 nav-3-3-1 first classic">
+                                                <li class="nav-item level2 nav-3-3-1 first ">
                                                     <a href="">
                                                         <span>Headsets</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-1 ">
                                                     <a href="">
                                                         <span>Bluetooth Wireless</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-1 ">
                                                     <a href="">
                                                         <span>Earphones</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-1 ">
                                                     <a href="">
                                                         <span>Batteries</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-1 ">
                                                     <a href="">
                                                         <span>Screen Protectors</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-1 ">
                                                     <a href="">
                                                         <span>Memory Cards</span>
                                                     </a>
                                                 </li>
 
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-1 ">
                                                     <a href="">
                                                         <span>Cables & Adapters</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-1 ">
                                                     <a href="">
                                                         <span>Cleaning Cloth</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-1 ">
                                                     <a href="">
                                                         <span>Chargers</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-1 ">
                                                     <a href="">
                                                         <span>Cases</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-1 ">
                                                     <a href="">
                                                         <span>Covers</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-1 ">
                                                     <a href="">
                                                         <span>Skins</span>
                                                     </a>
@@ -655,7 +674,7 @@
 
                                             </ul>
                                         </li>
-                                        <li class="nav-item level1 nav-3-3 last nav-item--only-subcategories parent">
+                                        <li class="nav-item level1 nav-3-3 last ">
                                             <div class="nav-block nav-block--top std">
                                                 <a href="">
                                                     <img src="./dist/images/04.png" width="100%">
@@ -665,27 +684,27 @@
                                                 <span>Cameras</span>
                                             </a>
                                             <ul class="level1 nav-submenu1 nav-panel second-font">
-                                                <li class="nav-item level2 nav-3-3-1 first classic">
+                                                <li class="nav-item level2 nav-3-3-1 first ">
                                                     <a href="">
                                                         <span>Digital Cameras</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-1 ">
                                                     <a href="">
                                                         <span>Camcorders</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-1 ">
                                                     <a href="">
                                                         <span>Lenses</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-1 ">
                                                     <a href="">
                                                         <span>Filters</span>
                                                     </a>
                                                 </li>
-                                                <li class="nav-item level2 nav-3-3-1 classic">
+                                                <li class="nav-item level2 nav-3-3-1 ">
                                                     <a href="">
                                                         <span>Tripods</span>
                                                     </a>
@@ -703,104 +722,104 @@
                         <span class="nav-item-content">Digital</span>
                         <span class="caret caret-1">&nbsp</span>
                     </a>
-                    <ul class="nav-panel--dropdown nav-panel nav-4">
-                        <li class="nav-item level1 nav-4-1 first">
+                    <ul class="nav-panel--dropdown nav-submenu nav-panel nav-4 none">
+                        <li class="nav-item level1 nav-4-1 nav-item--parent">
                             <a href="">
                                 <span>eBooks</span>
                                 <span class="caret caret-3">&nbsp</span>
                             </a>
-<!--                            <ul class="level1 nav-submenu nav-panel&#45;&#45;dropdown nav-panel nav-4-1">-->
-<!--                                <li class="nav-item level2 nav-4-1-1 classic">-->
-<!--                                    <a href="">-->
-<!--                                        <span>Design Theory</span>-->
-<!--                                    </a>-->
-<!--                                </li>-->
-<!--                                <li class="nav-item level2 nav-4-1-1 classic">-->
-<!--                                    <a href="">-->
-<!--                                        <span>Web Design</span>-->
-<!--                                    </a>-->
-<!--                                </li>-->
-<!--                                <li class="nav-item level2 nav-4-1-1 classic">-->
-<!--                                    <a href="">-->
-<!--                                        <span>Typography</span>-->
-<!--                                    </a>-->
-<!--                                </li>-->
-<!--                                <li class="nav-item level2 nav-4-1-1 classic">-->
-<!--                                    <a href="">-->
-<!--                                        <span>Magento Tutorials</span>-->
-<!--                                        <span class="caret">&nbsp</span>-->
-<!--                                    </a>-->
-<!--                                    <ul class="level2 nav-submenu nav-panel&#45;&#45;dropdown nav-panel nav-4-1">-->
-<!--                                        <li class="nav-item level2 nav-4-1-1 classic">-->
-<!--                                            <a href="">-->
-<!--                                                <span>Magento Themes</span>-->
-<!--                                            </a>-->
-<!--                                        </li>-->
-<!--                                        <li class="nav-item level2 nav-4-1-1 classic">-->
-<!--                                            <a href="">-->
-<!--                                                <span>Magento Extensions</span>-->
-<!--                                            </a>-->
-<!--                                        </li>-->
-<!--                                    </ul>-->
-<!--                                </li>-->
-<!--                            </ul>-->
+                            <ul class="level1 nav-submenu nav-panel--dropdown nav-panel nav-4-1 second-font none">
+                                <li class="nav-item level2 nav-4-1-1">
+                                    <a href="">
+                                        <span>Design Theory</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item level2 nav-4-1-2">
+                                    <a href="">
+                                        <span>Web Design</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item level2 nav-4-1-3">
+                                    <a href="">
+                                        <span>Typography</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item level2 nav-4-1-4">
+                                    <a href="">
+                                        <span>Magento Tutorials</span>
+                                        <span class="caret">&nbsp</span>
+                                    </a>
+                                    <ul class="level2 nav-submenu nav-panel--dropdown nav-panel nav-4-1 none">
+                                        <li class="nav-item level2 nav-4-1-4-1">
+                                            <a href="">
+                                                <span>Magento Themes</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item level2 nav-4-1-4-2">
+                                            <a href="">
+                                                <span>Magento Extensions</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav-item level1 nav-4-1 first nav-item--parent classic nav-item--only-subcategories parent">
+                        <li class="nav-item level1 nav-4-2">
                             <a href="">
                                 <span>Themes</span>
                             </a>
-                            <ul class="level1 nav-submenu nav-4-2 nav-panel">
-                                <li class="nav-item level2 nav-4-2-5 classic">
+                            <ul class="level1 nav-submenu nav-4-2">
+                                <li class="nav-item level2 nav-4-2-5">
                                     <a href="">
                                         <span>WordPress</span>
                                     </a>
                                 </li>
-                                <li class="nav-item level2 nav-4-2-5 classic">
+                                <li class="nav-item level2 nav-4-2-5">
                                     <a href="">
                                         <span>Magento</span>
                                     </a>
                                 </li>
-                                <li class="nav-item level2 nav-4-2-5 classic">
+                                <li class="nav-item level2 nav-4-2-5">
                                     <a href="">
                                         <span>OpenCart</span>
                                     </a>
                                 </li>
-                                <li class="nav-item level2 nav-4-2-5 classic">
+                                <li class="nav-item level2 nav-4-2-5">
                                     <a href="">
                                         <span>PrestaShop</span>
                                     </a>
                                 </li>
-                                <li class="nav-item level2 nav-4-2-5 classic">
+                                <li class="nav-item level2 nav-4-2-5">
                                     <a href="">
                                         <span>Drupal</span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item level1 nav-4-1 first nav-item--parent classic nav-item--only-subcategories parent">
+                        <li class="nav-item level1 nav-4-3">
                             <a href="">
                                 <span>Music</span>
                             </a>
                         </li>
-                        <li class="nav-item level1 nav-4-1 first nav-item--parent classic nav-item--only-subcategories parent">
+                        <li class="nav-item level1 nav-4-4">
                             <a href="">
                                 <span>Software</span>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item right pos-5">
+                <li class="nav-item right pos-5 hide-960">
                     <a href="" class="level-top">
                         <span class="nav-item-content">Custom</span>
                         <span class="caret caret-1">&nbsp</span>
                     </a>
-                    <div class="nav-panel--dropdown nav-panel nav-5">
+                    <div class="nav-panel--dropdown nav-panel nav-5 none">
                         <div class="nav-panel-inner">
                             <div class="nav-block--center grid-full">
                                 <div class="grid-container-spaced">
                                     <div class="grid12-3 responsive">
                                         <h2>Responsive Magento Theme</h2>
-                                        <p>Ultimo is a premium Magento theme with advanced admin module. It's extremely customizable and fully responsive. Can be used for every type of store.</p>
+                                        <p class="second-font">Ultimo is a premium Magento theme with advanced admin module. It's extremely customizable and fully responsive. Can be used for every type of store.</p>
                                         <h5><a class="go" href="">Buy this Magento theme</a></h5>
 
                                     </div>
@@ -809,7 +828,7 @@
                                             <img src="./dist/images/01.png" class="fade-on-hover"/>
                                         </a>
                                         <h4 class="heading">50+ CMS blocks</h4>
-                                        <p>You can use CMS blocks as content placeholders to display custom content in almost every part of the store. Import sample CMS blocks from the demo.</p>
+                                        <p class="second-font">You can use CMS blocks as content placeholders to display custom content in almost every part of the store. Import sample CMS blocks from the demo.</p>
                                         <a href="" class="go">See all features</a>
 
                                     </div>
@@ -818,7 +837,7 @@
                                             <img src="./dist/images/02.png" class="fade-on-hover">
                                         </a>
                                         <h4 class="heading">190-pages documentation</h4>
-                                        <p>The best Magento theme documentation on ThemeForest. It also describes selected Magento features which you need to know when starting to work with Magento.</p>
+                                        <p class="second-font">The best Magento theme documentation on ThemeForest. It also describes selected Magento features which you need to know when starting to work with Magento.</p>
                                         <a href="" class="go">See all features</a>
 
                                     </div>
@@ -827,7 +846,7 @@
                                             <img src="./dist/images/03.png" class="fade-on-hover"/>
                                         </a>
                                         <h4 class="heading">Easy to customize</h4>
-                                        <p>Use Ultimo as a starting point for your custom projects. Unlike many other themes, Ultimo lets you create multiple custom sub-themes (theme variants) for your clients.</p>
+                                        <p class="second-font">Use Ultimo as a starting point for your custom projects. Unlike many other themes, Ultimo lets you create multiple custom sub-themes (theme variants) for your clients.</p>
                                         <a href="" class="go">See all features</a>
                                     </div>
                                 </div>
@@ -835,7 +854,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="nav-item right">
+                <li class="nav-item right hide-960">
                     <a href="" class="level-top"><span class="nav-item-content">About Us</span></a>
                 </li>
             </ul>

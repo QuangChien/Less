@@ -83,7 +83,7 @@ a:hover {
   color: #5bd2ec;
   opacity: 1;
 }
-.pb-4 {
+.mb-4 {
   margin-bottom: 20px;
 }
 .mr-1 {
@@ -164,9 +164,6 @@ a:hover {
 }
 .opener {
   display: none;
-}
-#header-nav {
-  margin-top: 140px;
 }
 #header-nav .container {
   width: 96%;
@@ -606,8 +603,11 @@ a:hover {
   border-bottom: 5px solid #333;
 }
 @media screen and (max-width: 960px) {
-  .hide-960 {
+  .caret {
     display: none;
+  }
+  .hide-960 {
+    display: none!important;
   }
   .home-960 {
     display: block;
@@ -655,13 +655,11 @@ a:hover {
     float: none;
   }
   #header-nav .container .inner-container #nav .nav-item .level-top {
+    padding-left: 12px;
     width: unset;
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  #header-nav .container .inner-container #nav .nav-item .level-top .caret {
-    display: none;
   }
   #header-nav .container .inner-container #nav .nav-item .level-top .nav-item-content .cat-label-label1 {
     position: unset;
@@ -675,6 +673,14 @@ a:hover {
     border: none;
     box-shadow: none;
   }
+  #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-2 {
+    width: unset;
+    min-height: unset;
+  }
+  #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-2 .nav-block--center .nav-panel--dropdown {
+    display: none!important;
+    padding: 0!important;
+  }
   #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-1 {
     width: 100%;
     min-height: auto;
@@ -685,9 +691,15 @@ a:hover {
   #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown .nav-panel-inner .nav-block--center {
     width: 100%;
   }
+  #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown .nav-panel-inner .nav-block--center .nav-submenu {
+    display: unset;
+  }
   #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown .nav-panel-inner .nav-block--center .nav-submenu .nav-item {
     padding: 0;
     width: unset;
+  }
+  #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown .nav-panel-inner .nav-block--center .nav-submenu .nav-item.nav-2-2 {
+    margin-bottom: 0;
   }
   #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown .nav-panel-inner .nav-block--center .nav-submenu .nav-item.parent a {
     margin-bottom: 0;
@@ -697,6 +709,7 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     margin: 0;
+    text-transform: unset;
     padding: 12px  6px 12px 32px;
   }
   #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown .nav-panel-inner .nav-block--center .nav-submenu .nav-item a:hover {

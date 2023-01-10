@@ -95,7 +95,7 @@ a{
    }
 }
 
-.pb-4{
+.mb-4{
    margin-bottom: 20px;
 }
 
@@ -204,7 +204,6 @@ a{
 }
 
 #header-nav{
-   margin-top: 140px;
    .container{
       width: 96%;
       max-width: 1200px;
@@ -733,8 +732,12 @@ a{
 
 @media screen {
    @media (max-width: 960px) {
-      .hide-960{
+      .caret{
          display: none;
+      }
+
+      .hide-960{
+         display: none!important;
       }
       .home-960{
          display: block;
@@ -799,13 +802,11 @@ a{
                         //   background: @color-link;
                         //   color: @color-highlight;
                         //}
+                        padding-left: 12px;
                         width: unset;
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
-                        .caret{
-                           display: none;
-                        }
                         .nav-item-content{
                            .cat-label-label1{
                               position: unset;
@@ -816,6 +817,16 @@ a{
                         }
                      }
                      .nav-panel--dropdown{
+                        &.nav-2{
+                           width: unset;
+                           min-height: unset;
+                           .nav-block--center{
+                              .nav-panel--dropdown{
+                                 display: none!important;
+                                 padding: 0!important;
+                              }
+                           }
+                        }
                         position: unset;
                         background: inherit;
                         border: none;
@@ -829,7 +840,11 @@ a{
                            .nav-block--center{
                               width: 100%;
                               .nav-submenu{
+                                 display: unset;
                                  .nav-item{
+                                    &.nav-2-2{
+                                       margin-bottom: 0;
+                                    }
                                     &.parent{
                                        a{
                                           margin-bottom: 0;
@@ -841,6 +856,7 @@ a{
                                        align-items: center;
                                        justify-content: space-between;
                                        margin: 0;
+                                       text-transform: unset;
                                        //display: block;
                                        padding: 12px  6px 12px 32px;
                                        &:hover{

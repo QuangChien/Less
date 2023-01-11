@@ -353,12 +353,21 @@ a{
                               .nav-submenu1{
                                  display: block;
                                  .nav-item{
+                                    transition: 0.2s;
+                                    &:hover{
+                                       background-position: 5px 9px;
+                                    }
                                     width: 100%;
                                     background: url(../images/bullet.png) 2px 9px no-repeat;
                                     padding: 6px 0 0 15px;
                                     a{
                                        font-size: 12px;
                                        text-transform: capitalize;
+                                       &:hover{
+                                          .cat-label-label2{
+                                             background: @color-highlight-label;
+                                          }
+                                       }
                                     }
                                     &.first{
                                        margin-top: 8px;
@@ -368,6 +377,10 @@ a{
                                     }
                                     &.nav-item-parent{
                                        .nav-item{
+                                          transition: 0.2s;
+                                          &:hover{
+                                             background-position: 6px 8px;
+                                          }
                                           background: url(../images/bullet-mini.png) 3px 8px no-repeat;
                                           padding-left: 15px;
                                           a{
@@ -408,6 +421,13 @@ a{
                               &:hover {
                                  > ul{
                                     display: block;
+                                 }
+                              }
+                              a{
+                                 &:hover{
+                                    .cat-label-label2{
+                                       background: @color-highlight-label;
+                                    }
                                  }
                               }
                            }
@@ -474,6 +494,7 @@ a{
                                  cursor: pointer;
                                  text-align: center;
                                  line-height: 34px;
+                                 transition: 0.5s;
                                  &:hover{
                                     background: @color-base-type;
                                     svg{
@@ -499,7 +520,8 @@ a{
                                     bottom: 6px;
                                     right: 0;
                                     opacity: 0;
-                                    .transition(fill,400ms,background-color,400ms, ease-in-out);
+                                    transition: 0.2s;
+                                    //.transition(fill,400ms,background-color,400ms, ease-in-out);
                                     .action-item{
                                        display: flex;
                                        justify-content: center;
@@ -508,6 +530,7 @@ a{
                                        height: 36px;
                                        background: @color-highlight;
                                        margin-right: 4px;
+                                       transition: 0.5s;
                                        svg{
                                           stroke: @color-base-type;
                                        }
@@ -520,13 +543,13 @@ a{
                                        }
                                     }
                                  }
-                                 &:hover{
-                                    .product-action{
-                                       .toggle()
-                                    }
-                                 }
                               }
 
+                              &:hover{
+                                 .product-action{
+                                    .toggle()
+                                 }
+                              }
                               .product-name{
                                  font-size: 1.1666em;
                                  line-height: 1.2307em;
@@ -661,9 +684,16 @@ a{
                            }
                            &.nav-4-2{
                               .nav-item{
+                                 &:hover{
+                                    background-position: 6px 5px;
+                                 }
+                                 transition: 0.2s;
                                  background: url(../images/bullet-mini.png) 3px 5px no-repeat;
                                  padding-left: 15px;
                                  a{
+                                    &:hover{
+                                       opacity: 1;
+                                    }
                                     opacity: 0.7;
                                  }
                               }

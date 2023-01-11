@@ -293,13 +293,20 @@ a:hover {
   display: block;
 }
 #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown .nav-panel-inner .nav-block--center .nav-submenu .nav-item .nav-submenu1 .nav-item {
+  transition: 0.2s;
   width: 100%;
   background: url(../images/bullet.png) 2px 9px no-repeat;
   padding: 6px 0 0 15px;
 }
+#header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown .nav-panel-inner .nav-block--center .nav-submenu .nav-item .nav-submenu1 .nav-item:hover {
+  background-position: 5px 9px;
+}
 #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown .nav-panel-inner .nav-block--center .nav-submenu .nav-item .nav-submenu1 .nav-item a {
   font-size: 12px;
   text-transform: capitalize;
+}
+#header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown .nav-panel-inner .nav-block--center .nav-submenu .nav-item .nav-submenu1 .nav-item a:hover .cat-label-label2 {
+  background: #ff6500;
 }
 #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown .nav-panel-inner .nav-block--center .nav-submenu .nav-item .nav-submenu1 .nav-item.first {
   margin-top: 8px;
@@ -308,8 +315,12 @@ a:hover {
   margin-bottom: 8px;
 }
 #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown .nav-panel-inner .nav-block--center .nav-submenu .nav-item .nav-submenu1 .nav-item.nav-item-parent .nav-item {
+  transition: 0.2s;
   background: url(../images/bullet-mini.png) 3px 8px no-repeat;
   padding-left: 15px;
+}
+#header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown .nav-panel-inner .nav-block--center .nav-submenu .nav-item .nav-submenu1 .nav-item.nav-item-parent .nav-item:hover {
+  background-position: 6px 8px;
 }
 #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown .nav-panel-inner .nav-block--center .nav-submenu .nav-item .nav-submenu1 .nav-item.nav-item-parent .nav-item a {
   opacity: 0.7;
@@ -336,6 +347,9 @@ a:hover {
 }
 #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-2 .nav-block--center .dd-itemgrid-4col .nav-item:hover > ul {
   display: block;
+}
+#header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-2 .nav-block--center .dd-itemgrid-4col .nav-item a:hover .cat-label-label2 {
+  background: #ff6500;
 }
 #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-2 .nav-block--center .dd-itemgrid-4col .nav-2-2 {
   width: 23%;
@@ -392,6 +406,7 @@ a:hover {
   cursor: pointer;
   text-align: center;
   line-height: 34px;
+  transition: 0.5s;
 }
 #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-2 .nav-block--right .section-title .owl-button-wrap .owl-btn:hover {
   background: #333;
@@ -416,10 +431,7 @@ a:hover {
   bottom: 6px;
   right: 0;
   opacity: 0;
-  transition: fill 400ms ease-in-out, background-color 400ms ease-in-out;
-  -moz-transition: fill 400ms ease-in-out, background-color 400ms ease-in-out;
-  -webkit-transition: fill 400ms ease-in-out, background-color 400ms ease-in-out;
-  -o-transition: fill 400ms ease-in-out, background-color 400ms ease-in-out;
+  transition: 0.2s;
 }
 #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-2 .nav-block--right .product-grid .product-item .product-img .product-action .action-item {
   display: flex;
@@ -429,6 +441,7 @@ a:hover {
   height: 36px;
   background: #fff;
   margin-right: 4px;
+  transition: 0.5s;
 }
 #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-2 .nav-block--right .product-grid .product-item .product-img .product-action .action-item svg {
   stroke: #333;
@@ -440,7 +453,7 @@ a:hover {
   stroke: #fff;
   fill: #fff;
 }
-#header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-2 .nav-block--right .product-grid .product-item .product-img:hover .product-action {
+#header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-2 .nav-block--right .product-grid .product-item:hover .product-action {
   opacity: 1;
   transition-delay: 0s, 0s, 0.5s;
 }
@@ -552,11 +565,18 @@ a:hover {
   padding: 6px 0 0 15px;
 }
 #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-4 .nav-item .nav-submenu.nav-4-2 .nav-item {
+  transition: 0.2s;
   background: url(../images/bullet-mini.png) 3px 5px no-repeat;
   padding-left: 15px;
 }
+#header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-4 .nav-item .nav-submenu.nav-4-2 .nav-item:hover {
+  background-position: 6px 5px;
+}
 #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-4 .nav-item .nav-submenu.nav-4-2 .nav-item a {
   opacity: 0.7;
+}
+#header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-4 .nav-item .nav-submenu.nav-4-2 .nav-item a:hover {
+  opacity: 1;
 }
 #header-nav .container .inner-container #nav .nav-item .nav-panel--dropdown.nav-4 .nav-item.nav-item--parent .caret {
   float: right;

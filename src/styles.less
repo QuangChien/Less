@@ -1,212 +1,17 @@
-@import './lib/palette';
-@import (css) url('https://fonts.googleapis.com/css2?family=Bitter:wght@200;300;400&display=swap');
-
-html{
-   background: @color-highlight;
-}
-
-body{
-   font-family: 'Bitter', serif;
-   color: @color-base-type;
-   font-size: 75%;
-}
-
-.full-width{
-   width: 100%;
-}
-
-.grid12-3{
-   width: 23%;
-   display: inline;
-   float: left;
-   margin-left: 1%;
-   margin-right: 1%;
-}
-
-.grid12-4{
-   width: 31.33%;
-}
-
-.grid12-8{
-   width: 64.67%;
-}
-
-.grid-full {
-   width: 98%;
-}
-
-h1, h2, h3, h4, h5, h6{
-   margin: 0 0 10px;
-   font-weight: normal;
-}
-
-h2{
-   font-size: 2em;
-   line-height: 1.25em;
-   margin: 0 0 10px;
-   font-weight: normal;
-}
-
-h3{
-   font-size: 1.6666em;
-   line-height: 1.2em;
-}
-
-h4{
-   font-size: 1.3333em;
-   line-height: 1.25em;
-
-}
-
-h5{
-   font-size: 1.1666em;
-   line-height: 1.1428em;
-}
-
-p{
-   margin: 0 0 1em;
-   padding: 0;
-   line-height: 1.6;
-}
-
-ul{
-   list-style: none;
-   padding: 0;
-}
-
-a{
-   text-decoration: none;
-   color: @color-base-type;
-   .transition(color,200ms,background-color,200ms, ease-in-out);
-   &.go{
-      background: url(../images/bullet.png) 97% 50% no-repeat;
-      padding-right: 17px;
-      display: inline;
-   }
-   &.recommen-item{
-      &:hover{
-         background: @color-background-label-hot;
-         color: @color-highlight;
-      }
-   }
-   &:hover{
-      color: @color-link;
-      opacity: 1;
-   }
-}
-
-.mb-4{
-   margin-bottom: 20px;
-}
-
-.mr-1{
-   margin-right: 5px;
-}
-
-.mt-5{
-   margin-top: 25px;
-}
-
-.none{
-   display: none;
-}
-
-.flex{
-   display: flex;
-}
-
-.flex-wrap{
-   flex-wrap: wrap;
-}
-
-.content-between{
-   justify-content: space-between;
-}
-
-.align-center{
-   align-items: center;
-}
-
-.second-font{
-   font-family: Arial, sans-serif;
-}
-
-.transition (@property1,@duration1,@property2,@duration2, @timing) {
-   transition: @property1 (@duration1) @timing, @property2 (@duration2) @timing;
-   -moz-transition: @property1 (@duration1) @timing, @property2 (@duration2) @timing;
-   -webkit-transition: @property1 (@duration1) @timing, @property2 (@duration2) @timing;
-   -o-transition: @property1 (@duration1) @timing, @property2 (@duration2) @timing;
-}
-
-.toggle(){
-   opacity: 1;
-   transition-delay: 0s, 0s, 0.5s;
-}
-
-.section-line{
-   clear: both;
-   display: block;
-   height: 0;
-   margin: 0 0 10px;
-   padding: 10px 0 0;
-   border-bottom: 1px solid @border-color-separator;
-}
-
-.cat-label{
-   display: inline-block;
-   background-color: @color-link;
-   font-family: Arial, serif;
-   color: @color-highlight;
-   text-transform: capitalize;
-   &:hover{
-      background: @color-highlight-label;
-   }
-}
-
-.cat-label-label2{
-   padding: 2px 6px;
-   font-size: 11px;
-   .transition(color,300ms,background-color,300ms, ease-in-out);
-}
-
-.caret{
-   vertical-align: middle;
-   content: "";
-   white-space: nowrap;
-   display: inline-block;
-   height: 0;
-   width: 0;
-   opacity: 0.3;
-   margin-bottom: 2px;
-   margin-left: 1px;
-}
-
-.caret-2{
-   border-color: transparent transparent transparent @color-base-type;
-   border-style: solid none solid solid;
-   border-width: 4px 0 4px 4px;
-   margin-left: 5px;
-   opacity: 0.3;
-}
-
-.caret-1{
-   border-color: @color-base-type transparent transparent;
-   border-style: solid solid none;
-   border-width: 4px 4px 0;
-}
-
-.label-hot{
-   background: @color-background-label-hot;
-}
-
-.opener{
-   display: none;
-}
+//@import (css) url('https://fonts.googleapis.com/css2?family=Bitter:wght@200;300;400&display=swap');
+@import "modules/_fonts";
+@import 'modules/_variables';
+@import 'modules/_minxins';
+@import 'modules/_normal';
+@import 'modules/_grid';
+@import 'modules/_carret';
+@import 'modules/_label';
+@import 'modules/_custom';
 
 #header-nav{
    .container{
       width: 96%;
-      max-width: 1200px;
+      max-width: @max-width;
       margin-left: auto;
       margin-right: auto;
       .inner-container{
@@ -265,7 +70,7 @@ a{
                position: relative;
                .level-top{
                   font-size: 16px;
-                  padding: 0 6px;
+                  padding: @padding-nav-item;
                   line-height: 50px;
                   color: @color-base-type;
                   display: inline-block;
@@ -314,14 +119,14 @@ a{
                      }
                      .caret{
                         border-color: @color-highlight transparent transparent;
-                        opacity: 1;
+                        opacity: @opacity-submeu-hover;
                      }
                   }
                }
 
                .nav-panel--dropdown{
                   &:hover{
-                     opacity: 1!important;
+                     opacity: @opacity-submeu-hover!important;
                   }
                   border-top: 5px solid @color-link;
                   position: absolute;
@@ -358,7 +163,7 @@ a{
                                        background-position: 5px 9px;
                                     }
                                     width: 100%;
-                                    background: url(../images/bullet.png) 2px 9px no-repeat;
+                                    background: url(@bullet-url) 2px 9px no-repeat;
                                     padding: 6px 0 0 15px;
                                     a{
                                        font-size: 12px;
@@ -381,12 +186,12 @@ a{
                                           &:hover{
                                              background-position: 6px 8px;
                                           }
-                                          background: url(../images/bullet-mini.png) 3px 8px no-repeat;
+                                          background: url(@bullet-mini-url) 3px 8px no-repeat;
                                           padding-left: 15px;
                                           a{
-                                             opacity: 0.7;
+                                             opacity: @opacity-submenu;
                                              &:hover{
-                                                opacity: 1;
+                                                opacity: @opacity-submeu-hover;
                                              }
                                           }
                                        }
@@ -457,7 +262,6 @@ a{
                                           border-style: solid none solid solid;
                                           border-width: 4px 0 4px 4px;
                                           margin-left: 5px;
-                                          opacity: 0.2;
                                        }
                                        &:hover{
                                           .caret-3{
@@ -679,7 +483,7 @@ a{
                               top: 0;
                            }
                            .nav-item--parent{
-                              background: url(../images/bullet.png) 2px 9px no-repeat;
+                              background: url(@bullet-url) 2px 9px no-repeat;
                               padding: 6px 0 0 15px;
                            }
                            &.nav-4-2{
@@ -688,13 +492,13 @@ a{
                                     background-position: 6px 5px;
                                  }
                                  transition: 0.2s;
-                                 background: url(../images/bullet-mini.png) 3px 5px no-repeat;
+                                 background: url(@bullet-mini-url) 3px 5px no-repeat;
                                  padding-left: 15px;
                                  a{
                                     &:hover{
-                                       opacity: 1;
+                                       opacity: @opacity-submeu-hover;
                                     }
-                                    opacity: 0.7;
+                                    opacity: @opacity-submenu;
                                  }
                               }
                            }
@@ -707,7 +511,6 @@ a{
                               border-style: solid none solid solid;
                               border-width: 4px 0 4px 4px;
                               margin-left: 5px;
-                              opacity: 0.2;
                               display: inline-block;
                               width: 0;
                               height: 0;
@@ -725,7 +528,7 @@ a{
                      height: 400px;
                      .responsive a{
                         color: red;
-                        background: url(../images/bullet.png) 97% 50% no-repeat;
+                        background: url(@bullet-url) 97% 50% no-repeat;
                         padding-right: 17px;
                         display: inline;
                      }
@@ -897,7 +700,7 @@ a{
                               a{
                                  display: flex;
                                  justify-content: space-between;
-                                 font-family: 'Bitter', serif!important;
+                                 font-family: @primary-font!important;
                                  font-size: 16px;
                                  padding: 12px 6px 12px 32px;
                                  width: 100%;
@@ -941,7 +744,7 @@ a{
                                     a{
                                        font-size: 15px;
                                        padding-left: 52px;
-                                       opacity: 1!important;
+                                       opacity: @opacity-submeu-hover!important;
                                     }
                                  }
                               }
@@ -997,7 +800,7 @@ a{
                                              font-size: 15px;
                                              padding-left: 52px;
                                              margin-bottom: 0;
-                                             font-family: 'Bitter', serif;
+                                             font-family: @primary-font;
                                           }
                                           &.nav-item-parent {
                                              .nav-item{
@@ -1022,4 +825,5 @@ a{
       }
    }
 }
+
 

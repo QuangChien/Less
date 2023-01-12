@@ -1,0 +1,56 @@
+@import '_variables';
+@import '_minxins';
+
+.second-font{
+  font-family: @second-font;
+}
+
+.section-line{
+  clear: both;
+  display: block;
+  height: 0;
+  margin: 0 0 10px;
+  padding: 10px 0 0;
+  border-bottom: 1px solid @border-color-separator;
+}
+
+.opener{
+  display: none;
+}
+
+.mb-4{
+  margin-bottom: 20px;
+}
+
+.mr-1{
+  margin-right: 5px;
+}
+
+.mt-5{
+  margin-top: 25px;
+}
+
+.none{
+  display: none;
+}
+
+a{
+  text-decoration: none;
+  color: @color-base-type;
+  .transition(color,200ms,background-color,200ms, ease-in-out);
+  &.go{
+    background: url(@bullet-url) 97% 50% no-repeat;
+    padding-right: 17px;
+    display: inline;
+  }
+  &.recommen-item{
+    &:hover{
+      background: @color-background-label-hot;
+      color: @color-highlight;
+    }
+  }
+  &:hover{
+    color: @color-link;
+    opacity: 1;
+  }
+}

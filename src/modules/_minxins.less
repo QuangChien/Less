@@ -1,0 +1,11 @@
+.transition (@property1,@duration1,@property2,@duration2, @timing) {
+  transition: @property1 (@duration1) @timing, @property2 (@duration2) @timing;
+  -moz-transition: @property1 (@duration1) @timing, @property2 (@duration2) @timing;
+  -webkit-transition: @property1 (@duration1) @timing, @property2 (@duration2) @timing;
+  -o-transition: @property1 (@duration1) @timing, @property2 (@duration2) @timing;
+}
+
+.toggle(){
+  opacity: 1;
+  transition-delay: 0s, 0s, 0.5s;
+}

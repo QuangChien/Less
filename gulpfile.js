@@ -4,7 +4,7 @@ var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
 
 gulp.task('compile-less', function() {
-    gulp.src('./src/**/*.less')
+    gulp.src('./src/*.less')
         .pipe(less())
         .pipe(gulp.dest('./dist/css/'));
 });
@@ -15,8 +15,8 @@ gulp.task('serve', function () {
             baseDir: "./"
         }
     });
-    gulp.watch("./src/*.less").on("change", gulp.parallel('compile-less'));
-    gulp.watch("./src/*.less").on("change", reload);
+    gulp.watch("./src/**/*.less").on("change", gulp.parallel('compile-less'));
+    gulp.watch("./src/**/*.less").on("change", reload);
     gulp.watch("./*.html").on("change", reload);
 });
 

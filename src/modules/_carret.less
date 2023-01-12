@@ -1,0 +1,26 @@
+@import '_variables';
+
+.caret{
+  vertical-align: middle;
+  content: "";
+  white-space: nowrap;
+  display: inline-block;
+  height: 0;
+  width: 0;
+  opacity: 0.3;
+  margin-bottom: 2px;
+  margin-left: 1px;
+}
+
+.caret-2{
+  border-color: transparent transparent transparent @color-base-type;
+  border-style: solid none solid solid;
+  border-width: 4px 0 4px 4px;
+  margin-left: 5px;
+}
+
+.caret-1{
+  border-color: @color-base-type transparent transparent;
+  border-style: solid solid none;
+  border-width: 4px 4px 0;
+}
